@@ -1,6 +1,6 @@
 This directory is intended to be the image of a USB key to plug in to
 a Raspberry Pi. If you configure that Raspberry Pi according to the
-instructions in "scripts/files/README", it will run
+instructions in "script-files/README", it will run
 "~pi/bin/startup.sh" at boot time, and play one or more files from
 this directory.
 

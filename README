@@ -1,0 +1,44 @@
+This directory is intended to be the image of a USB key to plug in to
+a Raspberry Pi. If you configure that Raspberry Pi according to the
+instructions in "scripts/files/README", it will run
+"~pi/bin/startup.sh" at boot time, and play one or more files from
+this directory.
+
+"scripts-files/home/pi/bin/startup.sh" works as follows:
+
+It will play the single file "playone.mp3" in this directory, if it
+exists.
+
+Otherwise, if the "playall" directory exists, it will play all the
+.mp3 files in that directory, in alphabetical order.
+
+Otherwise, if the "playrandom" directory exists, it will play a random
+.mp3 file from that directory.
+
+This USB key should be plugged in to the lower-right-hand USB port on
+a Raspberry Pi 3 Model B+, so that the startup code in "/etc/fstab" will
+mount it on "/mnt/usbstorage".
+
+This directory is configured with a single MP3 file, "playone.mp3",
+which is a ring-tone I've been using for years of the bells from Pink
+Floyd's "Time" on "Dark Side of the Moon".
+
+That file is linked three times from each of the "playall.not" and
+"playrandom.not" directories. You'll want to replace those files with
+the ones you want to play, and rename "playone.mp3" to something else to
+use one of the two directories, renaming "playall.not" to "playall" or
+"playrandom.not" to "playrandom".
+
+You'll need the "omxplayer" executable, and some fonts to prevent it
+from printing a warning about a missing font.
+
+  sudo apt-get install omxplayer
+  sudo apt-get install ttf-freefont
+
+I also found useful this guide to headless setup of a Raspberry Pi,
+since I didn't have a corded USB mouse or keyboard around, and many
+people don't have an HDMI monitor.
+
+https://hackernoon.com/raspberry-pi-headless-install-462ccabd75d0
+
+I used the Canakit Complete Starter Kit: https://www.amazon.com/dp/B01C6Q2GSY

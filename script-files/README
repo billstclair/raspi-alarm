@@ -1,0 +1,14 @@
+This directory contains the scripts that are necessary to make the
+Raspberry Pi run ~pi/bin/startup.sh on startup. The directory
+structure below this directory mirrors "/" on the Raspberry Pi.
+
+/etc/fstab                # The /dev/sda1 line is added. The others will differ
+/etc/rc.local             # the line running ~/pi/bin/startup.sh is added.
+/home/pi/bin/startup.sh   # This is the startup script
+
+You need to setup the /mnt/usbstorage directory as directed at
+https://www.htpcguides.com/properly-mount-usb-storage-raspberry-pi
+
+At the very least, this means:
+
+  sudo mkdir -p /mnt/usbstorage

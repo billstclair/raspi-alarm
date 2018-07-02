@@ -9,11 +9,11 @@ this directory.
 It will play the single file "playone.mp3" in this directory, if it
 exists.
 
-Otherwise, if the "playall" directory exists, it will play all the
-.mp3 files in that directory, in alphabetical order.
+Then, for all directories whose names begin with "playall", it will
+play all the .mp3 files in that directory, in alphabetical order.
 
-Otherwise, if the "playrandom" directory exists, it will play a random
-.mp3 file from that directory.
+Then, for all directories whose names begin with "playrandom", it will
+play a random .mp3 file from that directory.
 
 This USB key should be plugged in to the lower-right-hand USB port on
 a Raspberry Pi 3 Model B+, so that the startup code in "/etc/fstab" will
@@ -23,11 +23,11 @@ This directory is configured with a single MP3 file, "playone.mp3",
 which is a ring-tone I've been using for years of the bells from Pink
 Floyd's "Time" on "Dark Side of the Moon".
 
-That file is linked three times from each of the "playall.not" and
-"playrandom.not" directories. You'll want to replace those files with
-the ones you want to play, and rename "playone.mp3" to something else to
-use one of the two directories, renaming "playall.not" to "playall" or
-"playrandom.not" to "playrandom".
+That file is linked three times from each of the "not.playall",
+"not.playall1", "not.playrandom", "not.playrandom1", and
+"not.playrandom2" directories. You'll want to replace those files with
+the ones you want to play, and remove the "not." prefixes and/or add
+more directories, as you desire.
 
 You'll need the "omxplayer" executable, and some fonts to prevent it
 from printing a warning about a missing font.
